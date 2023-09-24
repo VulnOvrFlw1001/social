@@ -11,7 +11,11 @@
                 {% if meeps %}
                 {% for meep in meeps %}
                 <div class="alert alert-info" role="alert">
-                    {{ meep }}
+                  {{ meep.body }}
+                  <br/>
+                  <small>
+                      {{ meep.created_at }} By @{{ meep.user.username }}
+                  </small>
                   </div>
                 <br><br/>
                 {% endfor %}
